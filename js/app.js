@@ -37,7 +37,7 @@ const handleInput = function (event) {
   newListItem.appendChild(newPosition);
 
   const newAverage = document.createElement('h6');
-  newAverage.textContent = `Average: ${average}`;
+  newAverage.textContent = `Average: \n ${average}`;
   newListItem.appendChild(newAverage);
 
   //removes the old entries from the form
