@@ -15,15 +15,15 @@
   <form id="new-cricketer-form" action="index.html" method="post">
 
     <label for="name" class="name">Name</label>
-    <input type="text" id="name" />
+    <input type="text" id="name" required/>
 
     <!-- <label for="position" >Position</label>
     <input type="text" id="position" /> -->
 
     <div class="form-radios">
-      <input type="radio" id="batter" name="position" value="batter">
-      <label for="batter">Batter</label>
-      <input type="radio" id="bowler" name="Position" value="bowler">
+      <input type="radio" id="batter" name="position" value="batter" required>
+      <label for="batter">Batsman</label>
+      <input type="radio" id="bowler" name="position" value="bowler">
       <label for="bowler">Bowler</label>
     </div>
 
@@ -51,10 +51,12 @@
 
     <h1>Cricketers:</h1>
 
+    <ul>
+      <div id="list-of-things">
+      </div>
+    </ul>
 
-    <div id="list-of-things">
 
-    </div>
 
   </div>
   <footer> <button id="delete-all">Remove All Cricketers </button> </footer>

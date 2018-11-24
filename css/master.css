@@ -49,15 +49,22 @@ header {
 #list-of-things {
     display: flex;
     flex-wrap: wrap;
+    list-style-type: none;
 }
 
+li {
+  opacity: 50%;
+}
 
 .cricketer {
     width: auto;
     margin: 0.5rem 0.5rem;
     padding: 2%;
-    background-color: antiquewhite;
+    background-color: lightGreen;
     border-radius: 3%;
+    text-align: center;
+    box-shadow: 6px 5px #325a57;
+    opacity: 0.93;
 }
 
 #delete-all {

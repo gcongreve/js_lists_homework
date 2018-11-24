@@ -41,15 +41,15 @@ const createNewCricketer = function (form) {
   const battingAverage = averages(matches, runs);
   const bowlingAverage = averages(wickets, conceded);
 
-  const newListItem = document.createElement('div');
+  const newListItem = document.createElement('li');
   newListItem.classList.add('cricketer');
 
   const newName = document.createElement('h4');
-  newName.textContent = `Name: ${name}`
+  newName.textContent = `${name}`
   newListItem.appendChild(newName);
 
   const newPosition = document.createElement('h6');
-  newPosition.textContent = `Position: ${position}`;
+  newPosition.textContent = `${position}`;
   newListItem.appendChild(newPosition);
 
   const newBatAverage = document.createElement('p');
