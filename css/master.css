@@ -5,9 +5,22 @@ html,body {
 
 body {
   font-family: fantasy;
-
 }
 
+
+header {
+    text-align: center;
+    background-color: lightgreen;
+    width: 100%;
+}
+
+#form-outer {
+  text-align: center;
+}
+
+#matches, #runs, #conceded, #wickets {
+  width: 5%;
+}
 
 
 .list-background {

@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-const averages = function (matches, runs) {
-  return (runs / matches)
+const averages = function (matchesOrWickets, runs) {
+  const avr = (runs / matchesOrWickets)
+  return avr.toFixed(2);
 };
 
 const handleInput = function (event) {
@@ -21,8 +22,13 @@ const handleInput = function (event) {
   const position = event.target.position.value;
   const runs = event.target.runs.value;
   const matches = event.target.matches.value;
+  const conceded = event.target.conceded.value;
+  const wickets = event.target.wickets.value;
 
-  const average = averages(matches, runs);
+
+
+  const battingAverage = averages(matches, runs);
+  const bowlingAverage = averages(wickets, conceded);
 
   const newListItem = document.createElement('div');
   newListItem.classList.add('cricketer');
@@ -38,9 +44,14 @@ const handleInput = function (event) {
   newPosition.textContent = `Position: ${position}`;
   newListItem.appendChild(newPosition);
 
-  const newAverage = document.createElement('p');
-  newAverage.textContent = `Batting average: \n ${average}`;
-  newListItem.appendChild(newAverage);
+  const newBatAverage = document.createElement('p');
+  newBatAverage.textContent = `Batting average: \n ${battingAverage}`;
+  newListItem.appendChild(newBatAverage);
+
+  const newBowlAverage = document.createElement('p');
+  newBowlAverage.textContent = `Bowling average: \n ${bowlingAverage}`;
+  newListItem.appendChild(newBowlAverage);
+
 
   const formInput = document.querySelector('#form-outer');
   formInput.reset();
