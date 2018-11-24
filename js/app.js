@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript has loaded');
 
-  const form = document.querySelector('form');
-   form.addEventListener('submit', handleInput);
+  const cricketForm = document.querySelector('form');
+   cricketForm.addEventListener('submit', handleInputNewCricketer);
 
    const deleteAll = document.querySelector('#delete-all');
    deleteAll.addEventListener('click', handleDeleteInput)
 })
 
-
+//averages function
 const averages = function (matchesOrWickets, runs) {
   if (matchesOrWickets === '0' || runs === '0'){
     return '~'
@@ -17,27 +17,32 @@ const averages = function (matchesOrWickets, runs) {
   return avr.toFixed(2);
 };
 
-const handleInput = function (event) {
-
+const handleInputNewCricketer = function (event) {
   event.preventDefault();
 
-  const name = event.target.name.value;
-  const position = event.target.position.value;
-  const runs = event.target.runs.value;
-  const matches = event.target.matches.value;
-  const conceded = event.target.conceded.value;
-  const wickets = event.target.wickets.value;
+  const newCricketer = createNewCricketer(event.target);
+  const cricketList = document.querySelector('#list-of-things');
+  cricketList.appendChild(newCricketer);
+
+  event.target.reset();
+};
 
 
+
+const createNewCricketer = function (form) {
+
+  const name = form.name.value;
+  const position = form.position.value;
+  const runs = form.runs.value;
+  const matches = form.matches.value;
+  const conceded = form.conceded.value;
+  const wickets = form.wickets.value;
 
   const battingAverage = averages(matches, runs);
   const bowlingAverage = averages(wickets, conceded);
 
   const newListItem = document.createElement('div');
   newListItem.classList.add('cricketer');
-
-  const cricketList = document.querySelector('#list-of-things');
-  cricketList.appendChild(newListItem);
 
   const newName = document.createElement('h4');
   newName.textContent = `Name: ${name}`
@@ -55,9 +60,7 @@ const handleInput = function (event) {
   newBowlAverage.textContent = `Bowling average: \n ${bowlingAverage}`;
   newListItem.appendChild(newBowlAverage);
 
-
-  const formInput = document.querySelector('#form-outer');
-  formInput.reset();
+  return newListItem;
 
   console.log(`${name}, ${position}, ${runs}, ${matches}`);
 
