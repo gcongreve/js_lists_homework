@@ -4,7 +4,7 @@ html,body {
 }
 
 body {
-  font-family: fantasy;
+  font-family: helvetica;
 }
 
 
@@ -12,6 +12,8 @@ header {
     text-align: center;
     background-color: lightgreen;
     width: 100%;
+    top: 0;
+    margin-bottom: 2%;
 }
 
 #form-outer {
@@ -78,7 +80,7 @@ header {
 }
 
 footer {
-  position:absolute;
+  position:fixed;
   bottom:0;
   width:100%;
   height:60px;
