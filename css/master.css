@@ -19,9 +19,22 @@ header {
 }
 
 #matches, #runs, #conceded, #wickets {
-  width: 5%;
+  width: 9%;
 }
 
+
+#form-submit {
+  color: white;
+  background: blue;
+  border: 1px lightBlue solid;
+  box-shadow: lightGrey;
+}
+#form-submit:hover {
+  color: white;
+  background: red;
+  border: 1px lightBlue solid;
+  box-shadow: lightGrey;
+}
 
 .list-background {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/be/Cricketfieldingpositions.jpg");
@@ -43,6 +56,25 @@ header {
     padding: 2%;
     background-color: antiquewhite;
     border-radius: 3%;
+}
+
+#delete-all {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 4px 2px;
+}
+
+#delete-all:hover {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 30px;
+    margin: 4px 2px;
 }
 
 footer {

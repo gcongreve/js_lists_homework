@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const averages = function (matchesOrWickets, runs) {
+  if (matchesOrWickets === '0' && runs === '0' ){
+    return '0'
+  }
   const avr = (runs / matchesOrWickets)
   return avr.toFixed(2);
 };
