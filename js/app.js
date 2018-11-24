@@ -17,6 +17,7 @@ const averages = function (matchesOrWickets, runs) {
   return avr.toFixed(2);
 };
 
+
 const handleInputNewCricketer = function (event) {
   event.preventDefault();
 
@@ -48,9 +49,13 @@ const createNewCricketer = function (form) {
   newName.textContent = `${name}`
   newListItem.appendChild(newName);
 
-  const newPosition = document.createElement('h6');
-  newPosition.textContent = `${position}`;
-  newListItem.appendChild(newPosition);
+  // const newPosition = document.createElement('h6');
+  // newPosition.textContent = `${position}`;
+  // newListItem.appendChild(newPosition);
+
+  const cricketPicture = document.createElement('img')
+  cricketPicture.src = "css/images/batter.jpg"
+  newListItem.appendChild(cricketPicture);
 
   const newBatAverage = document.createElement('p');
   newBatAverage.textContent = `Batting average: \n ${battingAverage}`;
@@ -59,6 +64,8 @@ const createNewCricketer = function (form) {
   const newBowlAverage = document.createElement('p');
   newBowlAverage.textContent = `Bowling average: \n ${bowlingAverage}`;
   newListItem.appendChild(newBowlAverage);
+
+
 
   return newListItem;
 

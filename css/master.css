@@ -67,6 +67,10 @@ li {
     opacity: 0.93;
 }
 
+.cricketer img {
+  height: 19%;
+}
+
 #delete-all {
     background-color: blue;
     border: none;
