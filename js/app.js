@@ -23,7 +23,7 @@ const handleInput = function (event) {
   //creates a new unordered list item with the css class of 'cricketer'
   //puts it into the div class of #list of things
   const newListItem = document.createElement('div');
-  newListItem.classList.add('Cricketer');
+  newListItem.classList.add('cricketer');
 
   const cricketList = document.querySelector('#list-of-things');
   cricketList.appendChild(newListItem);
