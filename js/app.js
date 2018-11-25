@@ -57,9 +57,17 @@ const createNewCricketer = function (form) {
   cricketPicture.src = `css/images/${position}.jpg`
   newListItem.appendChild(cricketPicture);
 
+  const newRuns = document.createElement('p');
+  newRuns.textContent = `Runs: \n ${runs}`;
+  newListItem.appendChild(newRuns);
+
   const newBatAverage = document.createElement('p');
   newBatAverage.textContent = `Batting average: \n ${battingAverage}`;
   newListItem.appendChild(newBatAverage);
+
+  const newWickets = document.createElement('p');
+  newWickets.textContent = `Wickets: \n ${wickets}`;
+  newListItem.appendChild(newWickets);
 
   const newBowlAverage = document.createElement('p');
   newBowlAverage.textContent = `Bowling average: \n ${bowlingAverage}`;
