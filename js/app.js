@@ -54,7 +54,7 @@ const createNewCricketer = function (form) {
   // newListItem.appendChild(newPosition);
 
   const cricketPicture = document.createElement('img')
-  cricketPicture.src = "css/images/batter.jpg"
+  cricketPicture.src = `css/images/${position}.jpg`
   newListItem.appendChild(cricketPicture);
 
   const newBatAverage = document.createElement('p');
@@ -64,8 +64,6 @@ const createNewCricketer = function (form) {
   const newBowlAverage = document.createElement('p');
   newBowlAverage.textContent = `Bowling average: \n ${bowlingAverage}`;
   newListItem.appendChild(newBowlAverage);
-
-
 
   return newListItem;
 
