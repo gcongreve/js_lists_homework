@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
    const deleteAll = document.querySelector('#delete-all');
    deleteAll.addEventListener('click', handleDeleteInput)
+
+   const deleteOne = document.querySelector('#delete-one');
+   deleteOne.addEventListener('click', handleDeleteOneInput)
+
+
 })
 
 //averages function
@@ -82,4 +87,10 @@ const createNewCricketer = function (form) {
 const handleDeleteInput = function (event) {
   const cricketList = document.querySelector('#list-of-things');
     cricketList.innerHTML = '';
+}
+
+const handleDeleteOneInput = function (event) {
+  const cricketList = document.querySelector('#list-of-things');
+    let lc = (cricketList.children.length - 1)
+    cricketList.children[lc].remove();
 }

@@ -97,6 +97,24 @@ li:hover {
     font-size: 30px;
     margin: 4px 2px;
 }
+#delete-one {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 4px 2px;
+}
+
+#delete-one:hover {
+    background-color: blue;
+    border: none;
+    color: white;
+    font-size: 30px;
+    margin: 4px 2px;
+}
 
 footer {
   position:fixed;
